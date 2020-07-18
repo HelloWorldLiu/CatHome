@@ -1,0 +1,17 @@
+<!--miniprogram/pages/aboutUs.wxml-->
+<view class="aboutUs">
+  <image class="logo" src="/images/logo@3x.png" alt=""></image>
+  <view class="content">
+    <view class="title">喵宅便签</view>
+    <view class="text">
+        <text>
+          喵宅便签是一个可以给您的猫咪添加专属提醒的工具，您可以添加多只猫咪，并为每只猫咪添加提醒。
+        </text>
+        <text>
+          您可以为每只猫咪添加详细资料，以记录猫咪的特点，帮助您更好地管理猫咪。
+        </text>
+    </view>
+  </view>
+ 
+</view>
+

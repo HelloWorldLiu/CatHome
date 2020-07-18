@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/mine/mine",
-    "pages/editCat/editCat"
+    "pages/editCat/editCat",
+    "pages/aboutUs"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

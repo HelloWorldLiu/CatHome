@@ -113,6 +113,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(){
+    wx.setNavigationBarTitle({
+      title: '编辑猫咪'
+    });
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#ffffff'
+    })
     this.initValidate();
   },
 

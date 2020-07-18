@@ -1,0 +1,19 @@
+/* miniprogram/pages/aboutUs.wxss */
+page {
+  background-color: #ffffff;
+}
+.logo {
+  display: block;
+  margin: 60px auto 20px;
+  height: 144rpx;
+  width: 144rpx;
+}
+.title {
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.text text{
+  font-size: 26rpx;
+  margin-top: 30px;
+}
