@@ -1,0 +1,15 @@
+<!--miniprogram/pages/mine/mine.wxml-->
+<view class="mine">
+  <image class="userinfo-avatar" src="{{avatarUrl}}"></image>
+  <view class="userName">{{userInfo.nickName}}</view>
+  <view class="menu">
+    <view class="menu-list">
+      <text>关于我们</text>
+      <image class="next" src="/images/icon_next@3x.png" mode="widthFix"></image>
+    </view>
+    <view class="menu-list">
+      <text>联系我们</text>
+      <image class="next" src="/images/icon_next@3x.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>

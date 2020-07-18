@@ -1,0 +1,177 @@
+<!--miniprogram/pages/editCat/editCat.wxml-->
+
+<form bindsubmit="submitForm">
+  <view class="info_list">
+    <view class="info cat_img">
+      <view class="left_title">
+        <text><text class="required">*</text> 照 片</text>
+      </view>
+      <view class="right_info" bindtap="chooseCatImage">
+        <view class="cat_img_border">
+          <image src="{{form.catImg}}" mode=""></image>
+        </view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text><text class="required">*</text> 名 字</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="name"
+          value="{{form.name}}" 
+          data-prop="name" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text><text class="required">*</text> 性 别</text>
+      </view>
+      <view class="right_info">
+        <picker
+          name="sex"
+          value="{{form.sex}}"  
+          data-prop="sex"  
+          bind:change="selectSex" 
+          range="{{sex_list}}"
+        >
+          <text>{{form.sex}}</text> 
+        </picker>
+      </view>  
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text><text class="required">*</text> 生 日</text>
+      </view>
+      <view class="right_info">
+        <picker
+          mode="date"
+          name="birthday"
+          value="{{form.birthday}}"  
+          data-prop="birthday"  
+        >
+          <text>{{form.birthday}}</text> 
+        </picker>
+
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text><text class="required">*</text> 品 种</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="breed"
+          value="{{form.breed}}" 
+          data-prop="breed" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text><text class="required">*</text> 绝育状态</text>
+      </view>
+      <view class="right_info">
+        <picker
+          name="sterilization"
+          value="{{form.sterilization}}"  
+          data-prop="sterilization"  
+          bind:change="selectsterilization" 
+          range="{{sterilization_list}}"
+        >
+          <text>{{form.sterilization}}</text> 
+        </picker>
+      </view>  
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>身 高</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="height"
+          value="{{form.height}}" 
+          data-prop="height" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>体 长</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="long"
+          value="{{form.long}}" 
+          data-prop="long" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>体 重</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="weight"
+          value="{{form.weight}}" 
+          data-prop="weight" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>性 格</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="characte"
+          value="{{form.characte}}" 
+          data-prop="characte" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>爱 吃</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="love_food"
+          value="{{form.love_food}}" 
+          data-prop="love_food" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <view class="info">
+      <view class="left_title">
+        <text>疾 病</text>
+      </view>
+      <view class="right_info">
+        <input 
+          name="disease"
+          value="{{form.disease}}" 
+          data-prop="disease" 
+          maxlength="10" 
+          placeholder="请输入"
+        ></input>
+      </view>
+    </view>
+    <button class="button" formType="submit">保存</button>
+  </view>
+</form>

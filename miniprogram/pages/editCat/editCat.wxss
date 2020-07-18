@@ -1,0 +1,69 @@
+/* miniprogram/pages/editCat/editCat.wxss */
+page{
+  padding: 0;
+  font-size: 28rpx;
+}
+.required{
+  color: red;
+}
+.info_list{
+  margin-top: 10rpx;
+}
+.info{
+  background-color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 2rpx;
+}
+
+.left_title{
+  width: 200rpx;
+  float:left;
+  height: 80rpx;
+}
+.left_title > text{
+  padding-left: 32rpx;
+}
+.right_info{
+  width: 540rpx;
+  height: 80rpx;
+  float:left;
+}
+.cat_img,.cat_img .left_title,.cat_img .right_info{
+  height: 140rpx;
+  line-height: 140rpx;
+}
+
+.cat_img .cat_img_border image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 0;
+  border-radius: 50%;
+  background-color: #fff;
+}
+/* .cat_img_border image{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+} */
+.cat_img_border image{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+.info input{
+  height: 80rpx;
+}
+
+.button{
+  background-color: #88D3D6;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin:32rpx 0;
+  border-radius: 10rpx;
+  padding: 0;
+  font-size: 28rpx;
+  font-weight: normal;
+  text-align: center;
+}

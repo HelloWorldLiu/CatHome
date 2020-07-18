@@ -1,0 +1,21 @@
+/* miniprogram/pages/home.wxss */
+page{background-color:#F7F7F7;}
+.home-image{
+  display: block;
+  width: 140rpx;
+  margin: 0 auto;
+  margin-top: 260rpx;
+  margin-bottom: 36rpx;
+}
+.geay-font{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 55rpx;
+}
+.add-cat-link{
+  color:#576B95;
+  font-size: 28rpx;
+  text-align:center;
+}
+

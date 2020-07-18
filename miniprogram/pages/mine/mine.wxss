@@ -1,0 +1,32 @@
+/* miniprogram/pages/mine/mine.wxss */
+page{
+  background-color: #F7F7F7;
+}
+.userinfo-avatar{
+  display: block;
+  margin:0 auto;
+  margin-top: 60rpx;
+}
+.userName{
+  font-size: 28rpx;
+  color: #333333;
+  text-align: center;
+  font-weight: bold;
+}
+.menu{
+  margin-top: 100rpx;
+}
+.menu-list{
+  background-color: #FFFFFF;
+  height: 70rpx;
+  margin-bottom: 10rpx;
+  padding:0 30rpx;
+  font-size: 28rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.menu-list .next{
+  float: right;
+  width: 32rpx;
+  margin-top: 19rpx;
+}
