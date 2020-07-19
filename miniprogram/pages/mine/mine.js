@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarUrl: '/images/user-unlogin.png',
-    userInfo: {},
+    avatarUrl: "/images/user-unlogin.png",
+    userInfo: {}
   },
   aboutUs: function (){
     wx.navigateTo({
-      url: '/pages/aboutUs/aboutUs',
+      url: "/pages/aboutUs/aboutUs",
       success: (result)=>{
       },
       fail: ()=>{},
@@ -24,19 +24,19 @@ Page({
   onLoad: function (options) {
     wx.getSetting({
       success: res => {
-        if (res.authSetting['scope.userInfo']) {
+        if (res.authSetting["scope.userInfo"]) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
               this.setData({
                 avatarUrl: res.userInfo.avatarUrl,
                 userInfo: res.userInfo
-              })
+              });
             }
-          })
+          });
         }
       }
-    })
+    });
   },
 
   /**
@@ -87,4 +87,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+});

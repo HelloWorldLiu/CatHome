@@ -1,6 +1,6 @@
 // miniprogram/pages/editCat/editCat.js
 
-import WxValidate from '../../utils/WxValidate.js'
+import WxValidate from "../../utils/WxValidate.js";
 Page({
 
   /**
@@ -22,20 +22,20 @@ Page({
       weight: 0,
       characte: "",
       love_food: "",
-      disease: "",
+      disease: ""
     }
   },
   selectSex(e) {
-    let sex = this.data.sex_list[e.detail.value]
+    let sex = this.data.sex_list[e.detail.value];
     this.setData({
       "form.sex": sex
-    })
+    });
   },
   selectsterilization(e) {
-    let sterilization = this.data.sterilization_list[e.detail.value]
+    let sterilization = this.data.sterilization_list[e.detail.value];
     this.setData({
       "form.sterilization": sterilization
-    })
+    });
   },
   chooseCatImage() {
     let vm = this;
@@ -47,65 +47,65 @@ Page({
         // 将图片上传至云存储空间
         wx.cloud.uploadFile({
           // 指定上传到的云路径
-          cloudPath: 'image/cat_image/'+ new Date().getTime() +"-"+ Math.floor(Math.random() * 1000),
+          cloudPath: "image/cat_image/"+ new Date().getTime() +"-"+ Math.floor(Math.random() * 1000),
           // 指定要上传的文件的小程序临时文件路径
           filePath: chooseResult.tempFilePaths[0],
           // 成功回调
           success: res => {
-            console.log(res.fileID)
-            vm.setData({ 'form.catImg': res.fileID })
+            console.log(res.fileID);
+            vm.setData({ "form.catImg": res.fileID });
   
-          },
-        })
-      },
-    })  
+          }
+        });
+      }
+    });  
   },
   onChange(e) {
     this.setData({
       [e.currentTarget.dataset.prop]: e.detail.value
-    })
+    });
   },
   saveCatInfo(){
     let vm = this;
     wx.cloud.callFunction({
-      name:'editCat',
+      name:"editCat",
       data: {
         action: "saveCat",
-        cat: vm.data,
+        cat: vm.data
       }
-    }).then(console.log)
+    }).then(console.log);
   },
 
   //报错 
   showModal(error) {
     wx.showModal({
       content: error.msg,
-      showCancel: false,
-    })
+      showCancel: false
+    });
   },
   initValidate() {
     const rules = {
       name: {
-        required: true,
-      },
-    }
+        required: true
+      }
+    };
     const messages = {
       name: {
-        required: '请填写名字',
-      },
-    }
-    this.WxValidate = new WxValidate(rules, messages)
+        required: "请填写名字"
+      }
+    };
+    this.WxValidate = new WxValidate(rules, messages);
   },
   // 调用验证方法，传入参数 e 是 form 表单组件中的数据
   submitForm(e) {
-    const params = e.detail.value
+    const params = e.detail.value;
 
-    console.log(params)
+    console.log(params);
     // 传入表单数据，调用验证方法
     if (!this.WxValidate.checkForm(params)) {
-      const error = this.WxValidate.errorList[0]
-      this.showModal(error)
-      return false
+      const error = this.WxValidate.errorList[0];
+      this.showModal(error);
+      return false;
     }
   },
   
@@ -114,12 +114,12 @@ Page({
    */
   onLoad(){
     wx.setNavigationBarTitle({
-      title: '编辑猫咪'
+      title: "编辑猫咪"
     });
     wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#ffffff'
-    })
+      frontColor: "#000000",
+      backgroundColor: "#ffffff"
+    });
     this.initValidate();
   },
 
@@ -171,4 +171,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+});
