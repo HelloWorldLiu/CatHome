@@ -1,5 +1,5 @@
 /* miniprogram/pages/home.wxss */
-page{background-color:#F7F7F7;}
+/* page{background-color:#F7F7F7;} */
 .home-image{
   display: block;
   width: 140rpx;

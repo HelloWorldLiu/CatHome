@@ -15,10 +15,6 @@ Page({
     wx.setNavigationBarTitle({
       title: '关于我们'
     });
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#ffffff'
-    })
   },
 
   /**

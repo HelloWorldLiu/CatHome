@@ -10,5 +10,8 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 
+#log Files
+yarn-error.log*
+
 # Node.js
 node_modules/

@@ -1,6 +1,6 @@
 /* miniprogram/pages/aboutUs.wxss */
 page {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 .logo {
   display: block;

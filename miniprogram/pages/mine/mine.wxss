@@ -1,11 +1,13 @@
 /* miniprogram/pages/mine/mine.wxss */
-page{
-  background-color: #F7F7F7;
-}
-.userinfo-avatar{
+/* 头像 */
+.userinfo-avatar {
   display: block;
-  margin:0 auto;
-  margin-top: 60rpx;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 60rpx auto 10rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
 }
 .userName{
   font-size: 28rpx;
