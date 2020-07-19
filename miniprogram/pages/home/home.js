@@ -5,7 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cats: [
+      {
+        catImg: "/images/cats/正品@3x.png",
+        name: "正品"
+      },
+      {
+        catImg: "/images/cats/喵喵@3x.png",
+        name: "喵喵"
+      },
+      {
+        catImg: "/images/cats/小橘@3x.png",
+        name: "小橘"
+      },
+      {
+        catImg: "/images/cats/提莫@3x.png",
+        name: "提莫"
+      },
+      {
+        catImg: "/images/cats/小尾@3x.png",
+        name: "小尾"
+      }
+    ]
   },
   addCat: function (){
     wx.navigateTo({
@@ -20,9 +41,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
-      title: "首页"
-    });
     // 获取用户信息
     wx.getSetting({
       success: res => {

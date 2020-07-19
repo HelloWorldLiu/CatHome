@@ -1,0 +1,31 @@
+/* Components/catCard.wxss */
+.catCard{
+  background-color: #FFFFFF;
+  padding: 0 30rpx;
+  margin-bottom: 2rpx;
+  height: 140rpx;
+}
+.cat_img {
+  display: block;
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 0;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.cat_name {
+  display: block;
+  float: left;
+  height: 140rpx;
+  line-height: 140rpx;
+  margin-left: 30rpx;
+  margin-top: 0rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.next {
+  float: right;
+  width: 32rpx;
+  margin-top: 57rpx;
+}

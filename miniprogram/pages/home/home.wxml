@@ -1,6 +1,11 @@
 <!--miniprogram/pages/home.wxml-->
 <view class='home'>
-  <image class='home-image' src='/images/home/首页插画@3x.png' mode="widthFix"></image>
-  <view class="geay-font"><text>还没有猫呢，点击下方按钮添加猫</text></view>
+  <view wx:if="{{cats.length > 0}}" class="cats">
+   <cat-card wx:for="{{cats}}" cat="{{item}}"></cat-card>
+  </view>
+  <view wx:else>
+    <image class='home-image' src='/images/home/首页插画@3x.png' mode="widthFix"></image>
+    <view class="geay-font"><text>还没有猫呢，点击下方按钮添加猫</text></view> 
+  </view>
   <view class="add-cat-link"><text bindtap="addCat"> + 添加猫</text></view>
 </view>

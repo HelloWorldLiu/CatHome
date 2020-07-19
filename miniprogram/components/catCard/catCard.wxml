@@ -1,0 +1,8 @@
+<!--Components/catCard.wxml-->
+<view class="catCard">
+  <image class="cat_img" src="{{cat.catImg}}" mode=""></image>
+  <view class="cat_name">
+    {{cat.name}}
+  </view>
+  <image class="" class="next" src="/images/icon_next@3x.png" mode="widthFix"></image>
+</view>
