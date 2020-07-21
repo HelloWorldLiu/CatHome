@@ -1,0 +1,4 @@
+<!--miniprogram/pages/catInfo/catInfo.wxml-->
+<view>
+ <cat-detail cat="{{cat}}"></cat-detail>
+</view>

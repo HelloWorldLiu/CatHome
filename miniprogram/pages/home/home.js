@@ -8,23 +8,28 @@ Page({
     cats: [
       {
         catImg: "/images/cats/正品@3x.png",
-        name: "正品"
+        name: "正品",
+        cat_id: 1
       },
       {
         catImg: "/images/cats/喵喵@3x.png",
-        name: "喵喵"
+        name: "喵喵",
+        cat_id: 2
       },
       {
         catImg: "/images/cats/小橘@3x.png",
-        name: "小橘"
+        name: "小橘",
+        cat_id: 3
       },
       {
         catImg: "/images/cats/提莫@3x.png",
-        name: "提莫"
+        name: "提莫",
+        cat_id: 4
       },
       {
         catImg: "/images/cats/小尾@3x.png",
-        name: "小尾"
+        name: "小尾",
+        cat_id: 5
       }
     ]
   },
@@ -32,6 +37,17 @@ Page({
     wx.navigateTo({
       url: "/pages/editCat/editCat",
       success: (result)=>{
+        console.log(result);
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
+  viewCat: function (cat_id){
+    wx.navigateTo({
+      url: "/pages/catInfo/catInfo?cat_id=" + cat_id,
+      success: (result)=>{
+        console.log(result);
       },
       fail: ()=>{},
       complete: ()=>{}

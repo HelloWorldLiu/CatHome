@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "cat-detail": "/components/catDetail/catDetail"
+  }
+}

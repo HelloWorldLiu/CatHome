@@ -1,0 +1,46 @@
+/* components/catDetail/catDetail.wxss */
+.cat-detail {
+  color: #333333;
+  margin-top: 30px;
+  padding: 30rpx;
+  background-color: #FFFFFF;
+}
+.cat-basic {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.cat-basic .title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.cat-basic .delete {
+  flex: 1;
+  font-size: 28rpx;
+  text-align: right;
+}
+.cat-body {
+ display: flex
+}
+.cat-head {
+  text-align: center;
+}
+.cat-head .head {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-bottom: 15rpx;
+}
+.cat-info {
+  flex: 1;
+  margin-left: 80rpx;
+}
+.cat-info  .item{
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.icon {
+  width: 24rpx;
+  height: 24rpx;
+}

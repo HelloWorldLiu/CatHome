@@ -1,0 +1,32 @@
+<!--components/catDetail/catDetail.wxml-->
+<view class="cat-detail">
+  <view class="cat-basic">
+    <view class="title"> 基本资料</view>
+    <view class="delete" bindtap="delete()"> 删除</view>
+  </view>
+  <view class="cat-body">
+    <view class="cat-head">
+      <image class="head" src="{{cat.cat_image}}"></image>
+      <view>{{cat.name}}</view>
+    </view>
+    <view class="cat-info">
+      <view class="item">
+        <image class="icon" src="/images/cats/icon_公@3x.png"></image>
+        {{cat.breed}}
+        {{cat.sterilization}}
+      </view>
+      <view class="item">
+        <image class="icon" src="/images/cats/icon_品种@3x.png"></image>
+        {{cat.breed}}
+      </view>
+      <view class="item">
+        <image class="icon" src="/images/cats/icon_疾病@3x.png"></image>
+        {{cat.disease}}
+      </view>
+      <view class="item">
+        <image class="icon" src="/images/cats/icon_食物@3x.png"></image>
+        {{cat.love_food}}
+      </view>
+    </view>
+  </view>
+</view>
