@@ -43,16 +43,6 @@ Page({
       complete: ()=>{}
     });
   },
-  viewCat: function (cat_id){
-    wx.navigateTo({
-      url: "/pages/catInfo/catInfo?cat_id=" + cat_id,
-      success: (result)=>{
-        console.log(result);
-      },
-      fail: ()=>{},
-      complete: ()=>{}
-    });
-  },
   /**
    * 生命周期函数--监听页面加载
    */

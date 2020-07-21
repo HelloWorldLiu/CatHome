@@ -6,7 +6,7 @@ Page({
    */
   data: {
     cat: {
-      cat_image:"/images/cats/小尾@3x.png",
+      cat_image:"/images/cats/正品@3x.png",
       birthday: "2020-06-22",
       breed: "中华田园猫",
       characte: "",
