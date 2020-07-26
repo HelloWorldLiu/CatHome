@@ -61,19 +61,39 @@ Page({
     });  
   },
   onChange(e) {
+    console.log(e);
     this.setData({
-      [e.currentTarget.dataset.prop]: e.detail.value
+      ["form."+e.currentTarget.dataset.prop]: e.detail.value
     });
   },
   saveCatInfo(){
     let vm = this;
+    console.log(vm.data.form);
     wx.cloud.callFunction({
       name:"editCat",
       data: {
         action: "saveCat",
-        cat: vm.data
+        cat: vm.data.form
       }
-    }).then(console.log);
+    }).then(res => {
+      console.log(res.result);
+      wx.showModal({
+        content: "保存成功！",
+        showCancel: false,
+        success (res) {
+          if (res.confirm) {
+            wx.navigateBack({
+              delta: 1,
+              success: function (e) {
+                var page = getCurrentPages().pop();
+                if (page == undefined || page == null) return;
+                page.onLoad();
+              }
+            });
+          }
+        }
+      });
+    });
   },
 
   //报错 
@@ -87,11 +107,17 @@ Page({
     const rules = {
       name: {
         required: true
+      },
+      breed: {
+        required: true
       }
     };
     const messages = {
       name: {
         required: "请填写名字"
+      },
+      breed: {
+        required: "请输入品种"
       }
     };
     this.WxValidate = new WxValidate(rules, messages);
@@ -99,13 +125,13 @@ Page({
   // 调用验证方法，传入参数 e 是 form 表单组件中的数据
   submitForm(e) {
     const params = e.detail.value;
-
-    console.log(params);
     // 传入表单数据，调用验证方法
     if (!this.WxValidate.checkForm(params)) {
       const error = this.WxValidate.errorList[0];
       this.showModal(error);
       return false;
+    }else{
+      this.saveCatInfo();
     }
   },
   

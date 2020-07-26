@@ -5,33 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cats: [
-      {
-        catImg: "/images/cats/正品@3x.png",
-        name: "正品",
-        cat_id: 1
-      },
-      {
-        catImg: "/images/cats/喵喵@3x.png",
-        name: "喵喵",
-        cat_id: 2
-      },
-      {
-        catImg: "/images/cats/小橘@3x.png",
-        name: "小橘",
-        cat_id: 3
-      },
-      {
-        catImg: "/images/cats/提莫@3x.png",
-        name: "提莫",
-        cat_id: 4
-      },
-      {
-        catImg: "/images/cats/小尾@3x.png",
-        name: "小尾",
-        cat_id: 5
-      }
-    ]
+    cats: []
   },
   addCat: function (){
     wx.navigateTo({
@@ -43,25 +17,40 @@ Page({
       complete: ()=>{}
     });
   },
+  getCats: function (data){
+    let vm = this;
+    wx.cloud.callFunction({
+      name:"getCats",
+      data: data
+    }).then(res => {
+      vm.setData({
+        cats:res.result.data
+      });
+      console.log(res.result);
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting["scope.userInfo"]) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              });
-            }
-          });
-        }
-      }
+    // wx.getSetting({
+    //   success: res => {
+    //     if (res.authSetting["scope.userInfo"]) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    //       wx.getUserInfo({
+    //         success: res => {
+    //           this.setData({
+    //             avatarUrl: res.userInfo.avatarUrl,
+    //             userInfo: res.userInfo
+    //           });
+    //         }
+    //       });
+    //     }
+    //   }
+    // });
+    this.getCats({
+      action: "cats"
     });
 
   },
@@ -98,7 +87,9 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.getCats({
+      action: "cats"
+    });
   },
 
   /**

@@ -2,5 +2,6 @@
   "usingComponents": {
     "cat-card": "/components/catCard/catCard"
   },
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true
 }

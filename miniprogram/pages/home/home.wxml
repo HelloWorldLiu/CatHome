@@ -1,7 +1,7 @@
 <!--miniprogram/pages/home.wxml-->
 <view class='home'>
   <view wx:if="{{cats.length > 0}}" class="cats">
-   <cat-card wx:for="{{cats}}" cat="{{item}}" id="{{item.cat_id}}"></cat-card>
+   <cat-card wx:for="{{cats}}" wx:key="_id" cat="{{item}}"></cat-card>
   </view>
   <view wx:else>
     <image class='home-image' src='/images/home/首页插画@3x.png' mode="widthFix"></image>

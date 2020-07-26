@@ -65,8 +65,8 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/catInfo/catInfo",
-					"pathName": "pages/catInfo/catInfo",
+					"name": "pages/editCat/editCat",
+					"pathName": "pages/editCat/editCat",
 					"query": "",
 					"scene": null
 				},

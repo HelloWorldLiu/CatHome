@@ -23,6 +23,7 @@
           data-prop="name" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -51,11 +52,11 @@
           mode="date"
           name="birthday"
           value="{{form.birthday}}"  
-          data-prop="birthday"  
+          data-prop="birthday"
+          bind:change="onChange"
         >
           <text>{{form.birthday}}</text> 
         </picker>
-
       </view>
     </view>
     <view class="info">
@@ -69,6 +70,7 @@
           data-prop="breed" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -99,6 +101,7 @@
           data-prop="height" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -113,6 +116,7 @@
           data-prop="long" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -127,6 +131,7 @@
           data-prop="weight" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -141,6 +146,7 @@
           data-prop="characte" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -155,6 +161,7 @@
           data-prop="love_food" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>
@@ -169,6 +176,7 @@
           data-prop="disease" 
           maxlength="10" 
           placeholder="请输入"
+          bindinput="onChange"
         ></input>
       </view>
     </view>

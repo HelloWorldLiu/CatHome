@@ -1,5 +1,5 @@
 <!--Components/catCard.wxml-->
-<view class="catCard" data-id="{{id}}" bindtap="viewCat">
+<view class="catCard" bindtap="viewCat">
   <image class="cat_img" src="{{cat.catImg}}" mode=""></image>
   <view class="cat_name">
     {{cat.name}}

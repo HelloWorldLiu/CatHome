@@ -7,9 +7,6 @@ Component({
     cat: { // 属性名
       type: Object,
       value: ""
-    },
-    "id": {
-      type: Number
     }
   },
 
@@ -25,7 +22,7 @@ Component({
    */
   methods: {
     viewCat(event){
-      let id = event.currentTarget.dataset.id;
+      let id = this.data.cat._id;
       console.log(id);
       wx.navigateTo({
         url: "/pages/catInfo/catInfo?cat_id=" + id,

@@ -6,7 +6,7 @@
   </view>
   <view class="cat-body">
     <view class="cat-head">
-      <image class="head" src="{{cat.cat_image}}"></image>
+      <image class="head" src="{{cat.catImg}}"></image>
       <view>{{cat.name}}</view>
     </view>
     <view class="cat-info">
