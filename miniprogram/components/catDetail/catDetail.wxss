@@ -7,6 +7,7 @@
 }
 .cat-basic {
   display: flex;
+  align-items: center;
   margin-bottom: 30rpx;
 }
 .cat-basic .title {
@@ -17,6 +18,7 @@
   flex: 1;
   font-size: 28rpx;
   text-align: right;
+  color: #F56C6C;
 }
 .cat-body {
  display: flex

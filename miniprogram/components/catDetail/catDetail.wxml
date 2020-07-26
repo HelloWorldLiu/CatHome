@@ -2,7 +2,7 @@
 <view class="cat-detail">
   <view class="cat-basic">
     <view class="title"> 基本资料</view>
-    <view class="delete" bindtap="delete()"> 删除</view>
+    <view class="delete" bindtap="removeCat"> 删除</view>
   </view>
   <view class="cat-body">
     <view class="cat-head">

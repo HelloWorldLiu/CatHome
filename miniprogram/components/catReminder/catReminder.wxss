@@ -1,0 +1,28 @@
+/* components/reminderCard/reminderCard.wxss */
+.cat-detail {
+  color: #333333;
+  margin-top: 30px;
+  padding: 30rpx;
+  background-color: #FFFFFF;
+}
+.cat-basic {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.cat-basic .title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.cat-basic .plus {
+  flex: 1;
+  display: flex;
+  flex-direction:row-reverse;
+  align-items:center;
+  width: 44rpx;
+  height: 44rpx;
+  text-align: right;
+}
+.cat-basic .plus image{
+  width: 36rpx;
+  height: 36rpx;
+}

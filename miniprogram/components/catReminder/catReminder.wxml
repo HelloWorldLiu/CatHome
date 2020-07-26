@@ -1,0 +1,13 @@
+<!--components/reminderCard/reminderCard.wxml-->
+<!--Components/catCard.wxml-->
+<view class="cat-detail">
+  <view class="cat-basic">
+    <view class="title"> 提醒列表</view>
+    <view class="plus" bindtap=""> 
+      <image class="image" src="/images/cats/icon_plus@3x.png"></image>
+    </view>
+  </view>
+  <view class="cat-body">
+  </view>
+</view>
+

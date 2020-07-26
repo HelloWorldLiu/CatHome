@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "cat-detail": "/components/catDetail/catDetail"
+    "cat-detail": "/components/catDetail/catDetail",
+    "cat-reminder": "/components/catReminder/catReminder"
   }
 }

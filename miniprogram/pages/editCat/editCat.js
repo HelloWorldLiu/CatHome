@@ -7,7 +7,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
     sex_list: ["公", "母"],
     sterilization_list: ["已绝育", "未绝育"],
     form: {
