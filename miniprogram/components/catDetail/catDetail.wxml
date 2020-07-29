@@ -27,6 +27,10 @@
         <image class="icon" src="/images/cats/icon_食物@3x.png"></image>
         {{cat.love_food}}
       </view>
+      <view class="item viewInfo">
+        详细资料
+        <image class="icon" src="/images/icon_next@3x.png"></image>
+      </view>
     </view>
   </view>
 </view>

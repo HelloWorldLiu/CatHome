@@ -16,9 +16,9 @@ Page({
       birthday: "2020-06-22",
       breed:"",
       sterilization: "未绝育",
-      height: 0,
-      long: 0,
-      weight: 0,
+      height: "",
+      long: "",
+      weight: "",
       characte: "",
       love_food: "",
       disease: ""
@@ -76,20 +76,20 @@ Page({
       }
     }).then(res => {
       console.log(res.result);
-      wx.showModal({
-        content: "保存成功！",
-        showCancel: false,
-        success (res) {
-          if (res.confirm) {
+      wx.showToast({
+        title: "保存成功！",
+        mask: true,
+        success () {
+          setTimeout(function(){
             wx.navigateBack({
               delta: 1,
-              success: function (e) {
+              success: function () {
                 var page = getCurrentPages().pop();
                 if (page == undefined || page == null) return;
                 page.onLoad();
               }
             });
-          }
+          }, 1000);
         }
       });
     });

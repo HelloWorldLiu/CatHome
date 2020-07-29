@@ -2,8 +2,9 @@
 .cat-detail {
   color: #333333;
   margin-top: 30px;
-  padding: 30rpx;
+  padding: 30rpx 30rpx 10rpx 30rpx;
   background-color: #FFFFFF;
+  overflow: hidden;
 }
 .cat-basic {
   display: flex;
@@ -25,4 +26,67 @@
 .cat-basic .plus image{
   width: 36rpx;
   height: 36rpx;
+}
+
+.cat-body .reminder-none {
+  font-size: 24rpx;
+  color: #999999;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.reminder-item {
+  padding: 10rpx 0;
+  position:relative;
+  width: 100%;
+}
+.reminder-item .content {
+  color: #333333;
+  min-height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.reminder-item .dateTime {
+  color: #999999;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 22rpx;
+}
+.reminder-item .item{
+  position: relative;
+  width: 100%;
+  left: 0;
+}
+.reminder-item .action{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  top: 0;
+  right: -250rpx;
+  width: 220rpx;
+}
+.reminder-item .action view{
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  font-size: 28rpx;
+  color: #fff;
+}
+.reminder-item .action .edit {
+  background-color: #FF8458;
+}
+.reminder-item .action .delete {
+  background-color: #FC561B;
+}
+
+.reminder-item .item{
+  left: -220rpx;
+}
+.reminder-item .action{
+  right: -30rpx;
 }

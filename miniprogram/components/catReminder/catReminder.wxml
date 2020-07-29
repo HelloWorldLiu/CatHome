@@ -8,6 +8,29 @@
     </view>
   </view>
   <view class="cat-body">
+    <view wx:if="{{reminder.length == 0}}" class="reminder-none">
+      点击右上角图标新增提醒
+    </view>
+    <view wx:else class="reminder-list">
+      <view wx:for="{{reminder}}" wx:key="_id" class="reminder-item">
+        <view class="item">
+          <view class="content">
+            {{item.content}}
+          </view>
+          <view class="dateTime">
+            {{item.dateTime}}
+          </view>
+        </view>
+        <view class="action">
+          <view class="edit">
+          编辑
+          </view>
+          <view  class="delete">
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
 

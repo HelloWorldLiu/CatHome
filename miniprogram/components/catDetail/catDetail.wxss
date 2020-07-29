@@ -46,3 +46,13 @@
   width: 24rpx;
   height: 24rpx;
 }
+.viewInfo.item {
+  display: flex;
+  margin-top: 30rpx;
+  justify-content:flex-end;
+  align-items:center;
+}
+.viewInfo.item .icon {
+  height: 26rpx;
+  margin-left: 20rpx;
+}

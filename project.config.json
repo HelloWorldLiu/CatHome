@@ -25,7 +25,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx84ca3d946902f16c",
@@ -65,8 +65,8 @@
 				},
 				{
 					"id": 1,
-					"name": "pages/editCat/editCat",
-					"pathName": "pages/editCat/editCat",
+					"name": "pages/catInfo/catInfo",
+					"pathName": "pages/catInfo/catInfo",
 					"query": "",
 					"scene": null
 				},

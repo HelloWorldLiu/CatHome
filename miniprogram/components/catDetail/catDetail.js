@@ -38,20 +38,20 @@ Component({
             }).then(res => {
               console.log(res.result);
               if(res.result.stats.removed>0){
-                wx.showModal({
-                  content: "已删除！",
-                  showCancel: false,
-                  success (res) {
-                    if (res.confirm) {
+                wx.showToast({
+                  title: "已删除！",
+                  mask: true,
+                  success () {
+                    setTimeout(function(){
                       wx.navigateBack({
                         delta: 1,
-                        success: function (e) {
+                        success: function () {
                           var page = getCurrentPages().pop();
                           if (page == undefined || page == null) return;
                           page.onLoad();
                         }
                       });
-                    }
+                    }, 1000);
                   }
                 });
               }else{

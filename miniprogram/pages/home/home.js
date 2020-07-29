@@ -19,6 +19,9 @@ Page({
   },
   getCats: function (data){
     let vm = this;
+    wx.showLoading({
+      title: "加载中"
+    });
     wx.cloud.callFunction({
       name:"getCats",
       data: data
@@ -26,33 +29,16 @@ Page({
       vm.setData({
         cats:res.result.data
       });
-      console.log(res.result);
+      wx.hideLoading();
     });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取用户信息
-    // wx.getSetting({
-    //   success: res => {
-    //     if (res.authSetting["scope.userInfo"]) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success: res => {
-    //           this.setData({
-    //             avatarUrl: res.userInfo.avatarUrl,
-    //             userInfo: res.userInfo
-    //           });
-    //         }
-    //       });
-    //     }
-    //   }
-    // });
     this.getCats({
       action: "cats"
     });
-
   },
 
   /**
@@ -87,9 +73,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getCats({
-      action: "cats"
-    });
+
   },
 
   /**
