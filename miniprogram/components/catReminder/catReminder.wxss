@@ -84,9 +84,9 @@
   background-color: #FC561B;
 }
 
-.reminder-item .item{
+/* .reminder-item .item{
   left: -220rpx;
 }
 .reminder-item .action{
   right: -30rpx;
-}
+} */

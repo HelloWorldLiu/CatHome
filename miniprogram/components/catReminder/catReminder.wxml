@@ -12,8 +12,8 @@
       点击右上角图标新增提醒
     </view>
     <view wx:else class="reminder-list">
-      <view wx:for="{{reminder}}" wx:key="_id" class="reminder-item">
-        <view class="item">
+      <view wx:for="{{reminder}}" wx:key="_id" data-index="{{index}}" class="reminder-item" bindtouchstart='touchstart' bindtouchmove='touchmove' bindtouchend='touchend'>
+        <view class="item" style="left:{{-item.x}}rpx">
           <view class="content">
             {{item.content}}
           </view>
@@ -21,7 +21,7 @@
             {{item.dateTime}}
           </view>
         </view>
-        <view class="action">
+        <view class="action" style="right:{{-250+item.x}}rpx">
           <view class="edit">
           编辑
           </view>
