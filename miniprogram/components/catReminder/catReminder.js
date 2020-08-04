@@ -14,31 +14,43 @@ Component({
    */
   data: {
     index:"",
-    Mstart:""
+    Mstart:0
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
+    addTip: function(){
+      console.log(1);
+    },
     //点击元素时记录坐标
     touchstart:function(e){
+      let list = this.data.reminder;
+      let move = list[e.currentTarget.dataset.index]["x"];
+      if(move == undefined){
+        move = 0;
+      }
+      console.log(e.changedTouches[0].pageX);
       this.setData({
         index: e.currentTarget.dataset.index,
-        Mstart: e.changedTouches[0].pageX
+        Mstart: move + e.changedTouches[0].pageX
       });
     },
 
     touchend: function (e) {
       let list = this.data.reminder;
       let move = this.data.Mstart - e.changedTouches[0].pageX;
-      if(move < 0){
+      console.log(move);
+      if(move < 110){
         move = 0;
       }
-      if(move >220){
+      if( move >= 110){
         move =220;
       }
       list[this.data.index]["x"] = move;
+        
+      
       this.setData({
         reminder: list
       });

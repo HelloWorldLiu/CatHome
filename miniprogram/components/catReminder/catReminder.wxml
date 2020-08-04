@@ -3,7 +3,7 @@
 <view class="cat-detail">
   <view class="cat-basic">
     <view class="title"> 提醒列表</view>
-    <view class="plus" bindtap=""> 
+    <view class="plus" bindtap="addTip"> 
       <image class="image" src="/images/cats/icon_plus@3x.png"></image>
     </view>
   </view>
